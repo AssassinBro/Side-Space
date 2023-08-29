@@ -1628,6 +1628,7 @@
   components:
   - type: Body
     prototype: Mouse
+  - type: FelinidFood
   - type: GhostRole
     makeSentient: true
     allowSpeech: true

@@ -18,26 +18,30 @@
     Drink:
       effects:
       - !type:SatiateThirst
-        factor: 1.0
+        factor: 1.5
+      - !type:SatiateHunger
+        factor: 0.5
         conditions:
           - !type:OrganType
-            type: Human
-            shouldHave: false
-    Food:
-      effects:
-        - !type:AdjustReagent
-          reagent: UncookedAnimalProteins
-          amount: 0.1
-    Medicine:
-      effects:
-      - !type:HealthChange
+            type: Vampiric
+      - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: Bloodsucker
-        damage:
-          groups:
-            Brute: -3
-            Burn: -1.25
+          - !type:OrganType
+            type: Vampiric
+        reagent: Water
+        amount: 0.15
+      - !type:AdjustReagent
+        conditions:
+          - !type:OrganType
+            type: Vampiric
+        reagent: Protein
+        amount: 0.15
+      - !type:AdjustReagent
+        conditions:
+          - !type:OrganType
+            type: Vampiric
+        reagent: Omnizine
+        amount: 0.2
   plantMetabolism:
     - !type:PlantAdjustWater
       amount: 0.5
@@ -59,6 +63,48 @@
   slippery: false
 
 - type: reagent
+  id: SyntheticBlood
+  name: reagent-name-syntheticblood
+  group: Biological
+  desc: reagent-desc-syntheticblood
+  flavor: metallic
+  color: "#800000"
+  physicalDesc: reagent-physical-desc-ferrous
+  slippery: false
+  metabolisms:
+    Drink:
+      # Quenching!
+      effects:
+        - !type:SatiateThirst
+          factor: 1.5
+        - !type:SatiateHunger
+          factor: 0.5
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+        - !type:AdjustReagent
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+          reagent: Water
+          amount: 0.15
+        - !type:AdjustReagent
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+          reagent: Protein
+          amount: 0.15
+        - !type:AdjustReagent
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+          reagent: Omnizine
+          amount: 0.1
+  plantMetabolism:
+    - !type:PlantAdjustWater
+      amount: 0.25
+
+- type: reagent
   id: Slime
   name: reagent-name-slime
   group: Biological
@@ -76,11 +122,44 @@
       # Delicious!
       effects:
       - !type:SatiateHunger
-        factor: 1
-  footstepSound:
-    collection: FootstepBlood
-    params:
-      volume: 6
+        factor: 1.5
+        conditions:
+          - !type:OrganType
+            type: Vampiric
+            shouldHave: false
+
+- type: reagent
+  id: InactiveBlood
+  name: reagent-name-inactiveblood
+  group: Biological
+  desc: reagent-desc-inactiveblood
+  flavor: metallic
+  color: "#800000"
+  physicalDesc: reagent-physical-desc-ferrous
+  slippery: false
+  metabolisms:
+    Drink:
+      # Quenching!
+      effects:
+        - !type:SatiateThirst
+          factor: 1.5
+        - !type:SatiateHunger
+          factor: 0.5
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 0.6
+          conditions:
+            - !type:OrganType
+              type: Vampiric
+          reagent: Water
+          amount: 0.15
+  plantMetabolism:
+    - !type:PlantAdjustWater
+      amount: 0.5
 
 - type: reagent
   id: Sap

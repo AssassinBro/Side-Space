@@ -14,6 +14,8 @@
     mindRoles:
     - MindRoleGhostRoleFamiliar
   - type: GhostTakeoverAvailable
+  - type: Body
+    prototype: VampiricAnimal
   - type: Grammar
     attributes:
       gender: female
