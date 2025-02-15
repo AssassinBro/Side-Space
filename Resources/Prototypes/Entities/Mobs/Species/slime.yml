@@ -13,6 +13,7 @@
     prototype: Slime
     requiredLegs: 2
   # they like eat it idk lol
+  - type: Geras
   - type: Storage
     clickInsert: false
     openOnActivate: false
