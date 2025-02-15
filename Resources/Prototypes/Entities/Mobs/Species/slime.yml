@@ -35,10 +35,6 @@
         type: StrippableBoundUserInterface
       enum.SurgeryUIKey.Key: # _CorvaxNext: surgery
         type: SurgeryBui
-      enum.VoiceMaskUIKey.Key:
-        type: VoiceMaskBoundUserInterface
-      enum.HumanoidMarkingModifierKey.Key:
-        type: HumanoidMarkingModifierBoundUserInterface
   # to prevent bag open/honk spam
   - type: UseDelay
     delay: 0.5
@@ -58,7 +54,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime
-  - type: Geras
   - type: PassiveDamage # Around 8 damage a minute healed
     allowedStates:
     - Alive
