@@ -261,8 +261,8 @@
         settings: short
 
 - type: entity
-  name: geras
-  description: A geras of a slime - the name is ironic, isn't it?
+  name: Герас
+  description: Маленькая версия крупного куска слизи
   id: MobSlimesGeras
   parent: BaseMobAdultSlimes
   categories: [ HideSpawnMenu ]
@@ -277,7 +277,7 @@
       80: Dead # weak af tho
   - type: NpcFactionMember
     factions:
-    - NanoTrasen
+    - SimpleHostile
   - type: MultiHandedItem
   - type: Item
     size: Huge

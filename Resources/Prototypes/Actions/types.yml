@@ -331,8 +331,8 @@
 
 - type: entity
   id: ActionMorphGeras
-  name: Morph into Geras
-  description:  Morphs you into a Geras - a miniature version of you which allows you to move fast, at the cost of your inventory.
+  name: Превратиться в гераса
+  description:  Превращает вас в гераса - миниатюрную версию вас, которая позволит вам бежать быстрее ценой инвентаря.
   components:
   - type: ConfirmableAction
     popup: gera-transformation-popup

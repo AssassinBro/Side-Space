@@ -1,0 +1,2 @@
+geras-popup-morph-message-user = Вы сбрасываете свои вещи и превращаетесь в маленькую версию себя!
+geras-popup-morph-message-others = {CAPITALIZE(THE($entity))} сбрасывает свои вещи и превращается в маленькую версию себя!
