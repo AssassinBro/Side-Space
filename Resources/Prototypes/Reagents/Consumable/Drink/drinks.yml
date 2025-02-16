@@ -342,7 +342,6 @@
   metabolisms:
     Drink:
       effects:
-<<<<<<< HEAD
       - !type:SatiateThirst
         factor: 6
       - !type:GenericStatusEffect
@@ -356,16 +355,6 @@
           types:
             Poison: 1
   fizziness: 0.5
-=======
-        - !type:SatiateThirst
-          factor: 6
-    Poison:
-      effects:
-        - !type:HealthChange
-          damage:
-            types:
-              Poison: 1
->>>>>>> 2b13907887 (fix (#205))
 
 - type: reagent
   id: SodaWater
@@ -413,7 +402,6 @@
   metabolisms:
     Drink:
       effects:
-<<<<<<< HEAD
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
@@ -425,13 +413,6 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-=======
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Theobromine
-          amount: 0.05
->>>>>>> 2b13907887 (fix (#205))
 
 - type: reagent
   id: TonicWater
@@ -478,7 +459,6 @@
   meltingPoint: 0.0
   boilingPoint: 100.0
   plantMetabolism:
-<<<<<<< HEAD
   - !type:PlantAdjustWater
     amount: 1
   metamorphicSprite:
@@ -487,10 +467,6 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-=======
-    - !type:PlantAdjustWater
-      amount: 1
->>>>>>> 2b13907887 (fix (#205))
 
 - type: reagent
   id: DryRamen
@@ -615,10 +591,5 @@
   metabolisms:
     Drink:
       effects:
-<<<<<<< HEAD
       - !type:SatiateThirst
         factor: 0.6
-=======
-        - !type:SatiateThirst
-          factor: 1
->>>>>>> 2b13907887 (fix (#205))

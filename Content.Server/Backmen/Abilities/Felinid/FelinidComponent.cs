@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Prototypes;
-using Content.Shared.Actions.ActionTypes;
+using Content.Shared.Actions;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Backmen.Abilities.Felinid;
