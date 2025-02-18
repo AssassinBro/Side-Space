@@ -1,4 +1,4 @@
-﻿﻿using Content.Server.Actions;
+﻿﻿﻿using Content.Server.Actions;
 using Content.Shared.Actions;
 using Content.Shared.StatusEffect;
 using Content.Shared.Throwing;
@@ -14,6 +14,7 @@ using Content.Server.Medical;
 using Content.Server.Nutrition.Components;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Server.Popups;
+using Content.Shared.Backmen.Psionics.Events;
 using Content.Shared.Chemistry.EntitySystems;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -29,7 +30,7 @@ public sealed class FelinidSystem : EntitySystem
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly HungerSystem _hungerSystem = default!;
     [Dependency] private readonly VomitSystem _vomitSystem = default!;
-    [Dependency] private readonly SolutionContainerSystem _solutionSystem = default!;
+    [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
