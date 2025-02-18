@@ -116,8 +116,6 @@
     interactFailureString: petting-failure-generic
   - type: Puller
     needsHands: false
-  - type: Arachne
-    cocoonDelay: 8
   - type: SolutionContainerManager
     solutions:
       melee:

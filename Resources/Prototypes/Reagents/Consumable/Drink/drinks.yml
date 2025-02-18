@@ -592,4 +592,4 @@
     Drink:
       effects:
       - !type:SatiateThirst
-        factor: 0.6
+        factor: 1
